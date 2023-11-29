@@ -343,7 +343,7 @@ export class MatchesService {
     //   console.log({ newUser });
     //   return;
     // }
-
+    console.log({ user });
     await this.userRepository.save(user);
   }
 }

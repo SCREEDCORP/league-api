@@ -115,13 +115,14 @@ export class MatchesController {
         summonerRegion,
         leaguePoints: filteredSummary.leaguePoints,
         summonerName: summonerDetails.data.name,
-        winRate:
+        winRate: Math.floor(
           Number(
             (
               filteredSummary.wins /
               (filteredSummary.wins + filteredSummary.losses)
             ).toFixed(2),
           ) * 100,
+        ),
       });
 
       return matches;
